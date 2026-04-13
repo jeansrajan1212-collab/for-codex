@@ -1,0 +1,18 @@
+experiment_id: E2
+name: guided_scaffold_baseline
+seed_count: 30
+environment:
+  tier: 1
+  name: particle_2d
+  steps: 2000
+model:
+  macro_architecture: input_latent_output
+  differentiation_enabled: false
+  split_enabled: false
+  prune_enabled: false
+metrics:
+  primary: pressure_mean
+  secondary:
+    - time_to_silence
+    - identity_entropy
+notes: "Fixed good architecture baseline reference."

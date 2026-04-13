@@ -1,0 +1,18 @@
+experiment_id: E3
+name: hybrid_scaffold_plus_differentiation
+seed_count: 30
+environment:
+  tier: 1
+  name: particle_2d
+  steps: 2000
+model:
+  macro_architecture: input_latent_output
+  differentiation_enabled: true
+  split_enabled: false
+  prune_enabled: false
+metrics:
+  primary: pressure_mean
+  secondary:
+    - time_to_silence
+    - identity_entropy
+notes: "Compare directly vs E2 scaffold baseline."
