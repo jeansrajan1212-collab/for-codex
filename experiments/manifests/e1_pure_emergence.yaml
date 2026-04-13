@@ -1,0 +1,20 @@
+experiment_id: E1
+name: pure_emergence_baseline
+seed_count: 30
+environment:
+  tier: 1
+  name: particle_2d
+  steps: 2000
+model:
+  macro_architecture: homogeneous_field
+  differentiation_enabled: true
+  split_enabled: true
+  prune_enabled: true
+metrics:
+  primary: pressure_mean
+  secondary:
+    - time_to_silence
+    - identity_entropy
+    - splits_total
+    - prunes_total
+notes: "No hand-crafted macro roles."
